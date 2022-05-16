@@ -22,10 +22,10 @@ typedef struct format
 	int (*f)();
 } convert_match;
 
-int printf_point(va_list val);
+int printf_pointer(va_list val);
 int printf_hex_a(unsigned long int num);
 int printf_HEX_A(unsigned int num);
-int printf_string(va_list val);
+int printf_S_str(va_list val);
 int printf_HEX(va_list val);
 int printf_hex(va_list val);
 int printf_oct(va_list val);
@@ -44,5 +44,6 @@ int printf_char(va_list val);
 int printf_string(va_list val);
 int _putchar(char c);
 int _printf(const char *format, ...);
+int printf_percent(void);
 
 #endif
