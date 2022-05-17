@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _MAIN_H
+#define _MAIN_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,8 +10,8 @@
 
 
 /**
- * struct format - match the conversion specifiers for printf
- * @id: type char pointer of the specifier i.e (l, h) for (d, i, u, o, x, X)
+ * struct format - Conversion specifiers for printf
+ * @id: type char pointer of the specifier
  * @f: type pointer to function for the conversion specifier
  *
  */
@@ -22,10 +22,9 @@ typedef struct format
 	int (*f)();
 } convert_match;
 
-int _printf(const char *format, ...);
 int printf_pointer(va_list val);
-int printf_hex_a(unsigned long int num);
-int printf_HEX_A(unsigned int num);
+int printf_hex_s(unsigned long int num);
+int printf_HEX_S(unsigned int num);
 int printf_S_str(va_list val);
 int printf_HEX(va_list val);
 int printf_hex(va_list val);
@@ -41,9 +40,10 @@ int *_strcpy(char *dest, char *src);
 int _strlenc(const char *s);
 int rev_string(char *s);
 int _strlenc(const char *s);
+int printf_percent(void);
 int printf_char(va_list val);
 int printf_string(va_list val);
 int _putchar(char c);
-int printf_percent(void);
+int _printf(const char *format, ...);
 
 #endif
