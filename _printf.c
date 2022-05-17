@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+
 /**
  * _printf - is a function that selects the correct function to print.
  * @format: identifier to look for.
@@ -7,9 +9,12 @@
 int _printf(const char * const format, ...)
 {
 	convert_match m[] = {
-		{"%s", printf_string}, {"%c", printf_char},
+                {"%c", printf_char},
+                {"%s", printf_string},
 		{"%%", printf_percent},
-		{"%i", printf_int}, {"%d", printf_dec}, {"%r", printf_srev},
+		{"%i", printf_int},
+                {"%d", printf_dec},
+                {"%r", printf_srev},
 		{"%R", printf_rot13}, {"%b", printf_bin}, {"%u", printf_unsigned},
 		{"%o", printf_oct}, {"%x", printf_hex}, {"%X", printf_HEX},
 		{"%S", printf_S_str}, {"%p", printf_pointer}
