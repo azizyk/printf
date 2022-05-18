@@ -5,7 +5,6 @@
  * @args: A va_list of arguments provided to _printf.
  * @output: A buffer_t struct.
  */
-
 void cleanup(va_list args, buffer_t *output);
 int run_printf(const char *format, va_list args, buffer_t *output);
 int _printf(const char *format, ...);
@@ -42,8 +41,7 @@ int run_printf(const char *format, va_list args, buffer_t *output)
 			tmp = 0;
 			flags = handle_flags(format + i + 1, &tmp);
 			wid = handle_width(args, format + i + tmp + 1, &tmp);
-			prec = handle_precision(args, format + i + tmp + 1,
-					&tmp);
+			prec = handle_precision(args, format + i + tmp + 1, &tmp);
 			len = handle_length(format + i + tmp + 1, &tmp);
 
 			f = handle_specifiers(format + i + tmp + 1);
@@ -80,6 +78,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
+
 	output = init_buffer();
 	if (output == NULL)
 		return (-1);
