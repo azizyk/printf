@@ -1,14 +1,15 @@
 #include "main.h"
 
-void cleanup(va_list args, buffer_t *output);
-int run_printf(const char *format, va_list args, buffer_t *output);
-int _printf(const char *format, ...);
-
 /**
  * cleanup - Peforms cleanup operations for _printf.
  * @args: A va_list of arguments provided to _printf.
  * @output: A buffer_t struct.
  */
+
+void cleanup(va_list args, buffer_t *output);
+int run_printf(const char *format, va_list args, buffer_t *output);
+int _printf(const char *format, ...);
+
 void cleanup(va_list args, buffer_t *output)
 {
 	va_end(args);
@@ -24,13 +25,14 @@ void cleanup(va_list args, buffer_t *output)
  *
  * Return: The number of characters stored to output.
  */
+
 int run_printf(const char *format, va_list args, buffer_t *output)
 {
 	int i, wid, prec, ret = 0;
 	char tmp;
 	unsigned char flags, len;
 	unsigned int (*f)(va_list, buffer_t *,
-			unsigned char, int, int, unsigned char);
+	unsigned char, int, int, unsigned char);
 
 	for (i = 0; *(format + i); i++)
 	{
