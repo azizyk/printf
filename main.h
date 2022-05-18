@@ -88,7 +88,7 @@ unsigned int convert_r(va_list args, buffer_t *output,
 unsigned int convert_R(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 
-/* C_Handlers */
+/* Handlers */
 unsigned char handle_flags(const char *flags, char *index);
 unsigned char handle_length(const char *modifier, char *index);
 int handle_width(va_list args, const char *modifier, char *index);
@@ -96,7 +96,7 @@ int handle_precision(va_list args, const char *modifier, char *index);
 unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
 		unsigned char, int, int, unsigned char);
 
-/* C_Modifiers */
+/* Modifiers */
 unsigned int print_width(buffer_t *output, unsigned int printed,
 		unsigned char flags, int wid);
 unsigned int print_string_width(buffer_t *output,
@@ -114,3 +114,4 @@ unsigned int convert_ubase(buffer_t *output, unsigned long int num, char *base,
 		unsigned char flags, int wid, int prec);
 
 #endif
+
