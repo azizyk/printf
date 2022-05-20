@@ -25,4 +25,8 @@ int _strlenc(const char *s)
 	for (c = 0; s[c] != 0; c++)
 		;
 	return (c);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 95b47d170c256e2845fbf524067fdc9e002a0efc

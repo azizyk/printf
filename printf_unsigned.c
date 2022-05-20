@@ -43,4 +43,8 @@ int printf_unsigned(va_list args)
 	_putchar(last + '0');
 
 	return (i);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 95b47d170c256e2845fbf524067fdc9e002a0efc

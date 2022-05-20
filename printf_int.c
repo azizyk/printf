@@ -1,4 +1,8 @@
 #include "main.h"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 95b47d170c256e2845fbf524067fdc9e002a0efc
 /**
  * printf_int - prints integer
  * @args: argument to print
@@ -87,4 +91,8 @@ int printf_dec(va_list args)
 	_putchar(last + '0');
 
 	return (i);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 95b47d170c256e2845fbf524067fdc9e002a0efc
